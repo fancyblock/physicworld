@@ -13,7 +13,7 @@ function InitialPhysic()
 	g_physic = require( "physics" )
 	g_physic.start( true )
 	g_physic.setGravity( 0, 9.8 )
-	g_physic.setDrawMode( "normal" )
+	g_physic.setDrawMode( "debug" )	--"hybrid", "debug"
 end
 
 
@@ -29,8 +29,8 @@ end
 
 --
 function CreateRandomBody()
-	local body = display.newCircle( 100, 100, 20 )
-	body.physicProperty = { density = 1.0, friction = 5, bounce = 0.1, radius = 20 }
+	local body = display.newCircle( 10, 10, 20 )
+	body.physicProperty = {}
 
 	return body
 end
