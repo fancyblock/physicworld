@@ -15,3 +15,5 @@ AddBody( CreateRandomBody() )
 
 -- g_physic.addBody( xx, { density = 1.0, friction = 5, bounce = 0.1, shape = {} } )
 
+
+print( "test" )
