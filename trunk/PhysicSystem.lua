@@ -25,7 +25,17 @@ function g_physicSys.AddBody( body )
 		g_physic.addBody( body, "static" )
 	end
 
-	g_physic.addBody( body, body.physicProperty )
+	g_physic.addBody( body, "static", body.physicProperty )
+end
+
+
+--
+function g_physicSys.AddObj( obj )
+	if obj.physicProperty == nil then
+		g_physic.addBody( obj )
+	end
+
+	g_physic.addBody( obj, obj.physicProperty )
 end
 
 
