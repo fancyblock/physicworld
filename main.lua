@@ -5,15 +5,33 @@
 --]]
 
 
+require "RollScene"
 
--- physic system initial
-require "PhysicSystem"
+--for test
+local rec = display.newRect( 0, 0, 480, 320 )
+rec:setFillColor( 40, 8, 70 )
 
-InitialPhysic()
+display.setStatusBar( display.HiddenStatusBar )
 
-AddBody( CreateRandomBody() )
+-- Create the roll scene
+CreateScene()
 
--- g_physic.addBody( xx, { density = 1.0, friction = 5, bounce = 0.1, shape = {} } )
+GenerateRandomScene()
 
+local posx = 0
 
-print( "test" )
+-- frame function
+local function _enterFrame( event )
+	
+	FlushScene()
+
+	MoveCamera( posx, 0 )
+	posx = posx + 3 
+
+	--[[
+		Unfinished
+	--]]
+end
+
+Runtime:addEventListener( "enterFrame", _enterFrame )
+
