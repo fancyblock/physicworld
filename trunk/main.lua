@@ -70,8 +70,9 @@ local posx = 0
 -- frame function
 local function _enterFrame( event )
 	
---	local chaPosX = CharacterPos()
-	MoveCamera( posx, 0 )
+	local chaPosX = CharacterPos()
+--	MoveCamera( posx, 0 )
+	MoveCamera( chaPosX, 0 )
 	posx = posx + 2.7
 
 end
