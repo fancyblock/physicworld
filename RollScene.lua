@@ -41,7 +41,7 @@ end
 
 -- Add Character
 function AddCharacter()
-	local _star = display.newImage( _scene, "ui_star.png" )
+	_star = display.newImage( _scene, "ui_star.png" )
 	_star.x = 20
 	_star.y = 250
 
@@ -86,7 +86,7 @@ function AddBouncLine( x1, y1, x2, y2 )
 	--bounce calculator
 	local bou = math.sqrt( ( x2 - x1 ) * ( x2 - x1 ) + ( y2 - y1 ) * ( y2 - y1 ) )
 	bou = 100 - bou
-	bou = bou / 10
+	bou = bou / 9
 	if bou < 0 then
 		bou = 0
 	end
