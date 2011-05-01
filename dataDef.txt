@@ -1,16 +1,16 @@
-12		#地图块数
+12		# count of map block
 
-[size]		#地图大小
+[size]		# map size
 2000
 500
 
-[tile]		#地图块数据
-tile01.png	#图数据
-20 20		#位置
-40 40		#宽高
-2		#有几个物理块
--10 -10 10 -10 10 10 -10 10	#第一个物理块信息
-xxxxxxxxxxxxxxxxx		#第二个物理块信息
+[tile]		# tile
+tile01.png	# pic file
+20 20		# width & height
+40 40		# x & y
+2		# count of physic block
+-10 -10 10 -10 10 10 -10 10	# physic block data
+xxxxxxxxxxxxxxxxx		# physic block data
 
 [tile]
 xxx.png
