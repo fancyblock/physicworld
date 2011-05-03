@@ -27,20 +27,54 @@ end
 
 --Load the map from file
 function LoadMap( filePath )
-	local path = system.pathForFile( filePath, system.DocumentsDirectory )
+	local path = system.pathForFile( filePath, system.ResourceDirectory )
 	local file = io.open( path, "r" )
-
+	
 	local _map
 
 	if file then
 
+		print( "[Read the map info]" )
+
 		local _blockCnt = file:read( "*n" )
 
+		-- find the size flag
+		repeat
+			_flag = file:read( "*l" )
+		until _flag == "[size]"
 
-		-- file:read( "*n" )	file:read( "*l" )
+		-- read the map width & height
+		_mapWid = file:read( "*n" )
+		file:read( "*l" )
+		_mapHei = file:read( "*n" )
+		file:read( "*l" )
+
+		-- create the map
+		_map = CreateMap( _mapWid, _mapHei )
+
+		-- read the tile info of the map
+		for i = 1, _blockCnt do
+
+			-- fine the tile flag
+			repeat
+				_flag = file:read( "*l" )
+			until _flag == "[tile]"
+
+			-- read the tile info
+			_img = file:read( "*l" )
+			_wid = file:read( "*n" )
+			_hei = file:read( "*n" )
+			file:read( "*l" )
+			_x = file:read( "*n" )
+			_y = file:read( "*n" )
+
+			--
+		end
 
 		io.close( file )
 	end
+
+	return _map
 end
 
 
