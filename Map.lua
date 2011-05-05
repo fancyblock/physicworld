@@ -30,6 +30,12 @@ function GetTileCount( map )
 end
 
 
+-- return the specific tile
+function GetTile( map, index )
+	return map[index]
+end
+
+
 -- Add a tile to the map
 function AddTile( map, tile )
 	map._tileCount = map._tileCount + 1
