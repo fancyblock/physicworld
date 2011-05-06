@@ -8,7 +8,8 @@
   <DocumentFolders>
     <XmlDocumentFolder>
       <Documents>
-        <DocumentRef FileName=".\Map.lua" />
+        <DocumentRef FileName=".\MapData.lua" />
+        <DocumentRef FileName=".\Quadtree.lua" />
       </Documents>
       <DocumentGroups />
       <DocumentFolders />
