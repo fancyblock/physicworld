@@ -5,3 +5,11 @@
 --]]
 
 
+require "Map/MapData"
+
+
+-- generate the quadtree from raw data
+function GenQuadTree( raw_map )
+	--
+end
+

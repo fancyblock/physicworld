@@ -5,6 +5,29 @@
 --]]
 
 
+--[[
+	Map Data Struct =
+	
+	{
+		_width = 0,
+		_height = 0,
+		_tileCount = 1,
+		
+		[1] = 
+			{
+				_image = "",
+				_width = 0,
+				_height = 0,
+				_x = 0,
+				_y = 0,
+				_physicBlockCount = 1,
+				
+				[1] = { 0, 0, 1, 1, 1, 0 }
+			}
+	}
+	
+--]]
+
 -- Create a empty map
 function CreateMap( width, height )
 	local _map = {}
@@ -63,6 +86,36 @@ end
 function AddPhysicBlock( tile, physicBlock )
 	tile._physicBlockCount = tile._physicBlockCount + 1
 	tile[tile._physicBlockCount] = physicBlock
+end
+
+
+-- Get tile pic
+function GetTileImage( tile )
+	return tile._image
+end
+
+
+-- Get tile size
+function GetTileSize( tile )
+	return tile._width, tile._height
+end
+
+
+-- Get tile position
+function GetTilePosition( tile )
+	return tile._x, tile._y
+end
+
+
+-- Get tile physic block count
+function GetTilePhysicBlockCount( tile )
+	return tile._physicBlockCount
+end
+
+
+-- Get tile physic block
+function GetTilePhysicBlock( tile, index )
+	return tile[index]
 end
 
 

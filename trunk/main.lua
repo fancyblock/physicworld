@@ -5,7 +5,7 @@
 --]]
 
 
-require "Map/map"
+require "Map/Quadtree"
 
 local _map = LoadMap( "lvTest.map" ) --CreateMap( 2000, 800 )
 
