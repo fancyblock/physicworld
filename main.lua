@@ -11,3 +11,9 @@ local _map = LoadMap( "lvTest.map" ) --CreateMap( 2000, 800 )
 
 PrintMap( _map )
 
+
+function _onFrame( event )
+	print "."
+end
+
+Runtime:addEventListener( "enterFrame", _onFrame )
