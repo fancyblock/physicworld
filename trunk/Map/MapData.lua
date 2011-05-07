@@ -14,16 +14,17 @@
 		_tileCount = 1,
 		
 		[1] = 
-			{
-				_image = "",
-				_width = 0,
-				_height = 0,
-				_x = 0,
-				_y = 0,
-				_physicBlockCount = 1,
+		{
+			_id = 1,
+			_image = "",
+			_width = 0,
+			_height = 0,
+			_x = 0,
+			_y = 0,
+			_physicBlockCount = 1,
 				
-				[1] = { 0, 0, 1, 1, 1, 0 }
-			}
+			[1] = { 0, 0, 1, 1, 1, 0 }
+		}
 	}
 	
 --]]
@@ -63,6 +64,8 @@ end
 function AddTile( map, tile )
 	map._tileCount = map._tileCount + 1
 	map[map._tileCount] = tile
+	
+	tile._id = map._tileCount
 end
 
 

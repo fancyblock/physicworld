@@ -15,6 +15,12 @@
       <DocumentFolders />
       <RelativePath>.\Map\</RelativePath>
     </XmlDocumentFolder>
+    <XmlDocumentFolder>
+      <Documents />
+      <DocumentGroups />
+      <DocumentFolders />
+      <RelativePath>.\Scene\</RelativePath>
+    </XmlDocumentFolder>
   </DocumentFolders>
   <ProjectProperties>
     <ExternalProgram />
