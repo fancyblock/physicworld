@@ -5,15 +5,25 @@
 --]]
 
 
-require "Map/Quadtree"
+require "Scene/Scene"
 
+
+-- Load the map
 local _map = LoadMap( "lvTest.map" ) --CreateMap( 2000, 800 )
 
 PrintMap( _map )
 
 
+-- Initial the scene
+local _gameCanva = display.newGroup()
+local _scene = CreateScene( _gameCanva, _map )
+
+MoveCamera( _scene, 0, 0 )
+
+UpdateScene( _scene )
+
 function _onFrame( event )
-	print "."
 end
 
 Runtime:addEventListener( "enterFrame", _onFrame )
+

@@ -135,10 +135,12 @@ function LoadMap( filePath )
 
 		local _tileCnt = file:read( "*n" )
 
+		print( _tileCnt )
+
 		-- find the size flag
 		repeat
 			_flag = file:read( "*l" )
-		until _flag == "[size]"
+		until string.sub( _flag, 1, 6 ) == "[size]"
 
 		-- read the map width & height
 		_mapWid = file:read( "*n" )
@@ -155,7 +157,7 @@ function LoadMap( filePath )
 			-- fine the tile flag
 			repeat
 				_flag = file:read( "*l" )
-			until _flag == "[tile]"
+			until string.sub( _flag, 1, 6 ) == "[tile]"
 
 			-- read the tile info
 			_img = file:read( "*l" )
