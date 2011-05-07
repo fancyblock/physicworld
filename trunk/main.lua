@@ -9,8 +9,7 @@ require "Scene/Scene"
 
 
 -- Load the map
-local _map = LoadMap( "lvTest.map" ) --CreateMap( 2000, 800 )
-
+local _map = LoadMap( "lvTest.map" )
 PrintMap( _map )
 
 
@@ -22,8 +21,11 @@ MoveCamera( _scene, 0, 0 )
 
 UpdateScene( _scene )
 
+
+
 function _onFrame( event )
 end
+
 
 Runtime:addEventListener( "enterFrame", _onFrame )
 

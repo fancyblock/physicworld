@@ -9,14 +9,15 @@
     <XmlDocumentFolder>
       <Documents>
         <DocumentRef FileName=".\MapData.lua" />
-        <DocumentRef FileName=".\Quadtree.lua" />
       </Documents>
       <DocumentGroups />
       <DocumentFolders />
       <RelativePath>.\Map\</RelativePath>
     </XmlDocumentFolder>
     <XmlDocumentFolder>
-      <Documents />
+      <Documents>
+        <DocumentRef FileName=".\Scene.lua" />
+      </Documents>
       <DocumentGroups />
       <DocumentFolders />
       <RelativePath>.\Scene\</RelativePath>
