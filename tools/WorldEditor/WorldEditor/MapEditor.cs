@@ -26,7 +26,11 @@ namespace WorldEditor
          */
         private void newMapToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            WorldEditor.Dialog.NewMap dlg = new Dialog.NewMap();
+
+            dlg.Show();
             
+            //[unfinished]
         }
 
         private void loadMapToolStripMenuItem_Click(object sender, EventArgs e)

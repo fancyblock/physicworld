@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialog\NewMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\NewMap.Designer.cs">
+      <DependentUpon>NewMap.cs</DependentUpon>
+    </Compile>
     <Compile Include="MapData\Map.cs" />
     <Compile Include="MapData\MapTile.cs" />
     <Compile Include="MapEditor.cs">
@@ -56,6 +62,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dialog\NewMap.resx">
+      <DependentUpon>NewMap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MapEditor.en.resx">
       <DependentUpon>MapEditor.cs</DependentUpon>
     </EmbeddedResource>

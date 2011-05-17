@@ -13,9 +13,9 @@ namespace WorldEditor.MapData
     class MapTile
     {
         //enum flag
-        static public const int FLAG_FREE = 1;
-        static public const int FLAG_ON_MAP = 2;
-        static public const int FLAG_DEL = 3;
+        static public int FLAG_FREE = 1;
+        static public int FLAG_ON_MAP = 2;
+        static public int FLAG_DEL = 3;
 
         //id of this tile
         private int m_id;
