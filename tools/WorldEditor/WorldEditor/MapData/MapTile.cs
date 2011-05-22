@@ -23,6 +23,9 @@ namespace WorldEditor.MapData
         //flag of this tile
         private int m_flag;
 
+        //type of the tile
+        private string m_type = "";
+
         /**
          * @desc    constructor
          */
@@ -55,6 +58,15 @@ namespace WorldEditor.MapData
             set
             {
                 m_flag = value;
+            }
+        }
+
+        //access the type
+        public string TYPE
+        {
+            get
+            {
+                return m_type;
             }
         }
 

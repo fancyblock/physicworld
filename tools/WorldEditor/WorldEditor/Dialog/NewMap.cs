@@ -22,7 +22,7 @@ namespace WorldEditor.Dialog
         /**
          * desc 
          */
-        public int WIDTH
+        public int MAP_WIDTH
         {
             get
             {
@@ -37,7 +37,7 @@ namespace WorldEditor.Dialog
         /**
          * @desc
          */
-        public int HEIGHT
+        public int MAP_HEIGHT
         {
             get
             {
@@ -50,10 +50,28 @@ namespace WorldEditor.Dialog
         }
 
         /**
+         * @desc    judge if the input value is valid
+         */
+        public bool IsValidSize()
+        {
+            if (m_sizeWid > 0 && m_sizeHei > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        /**
          * @desc    create a new map
          */
         private void btnOk_Click(object sender, EventArgs e)
         {
+            if( this.txtMapHeight.Text == "" || this.txtMapWidth.Text == "" )
+            {
+                return;
+            }
+
             int hei = int.Parse( this.txtMapHeight.Text );
             int wid = int.Parse( this.txtMapWidth.Text );
 
@@ -67,6 +85,8 @@ namespace WorldEditor.Dialog
 
             this.txtInfo.Text = "Invalide Size";
         }
+
+        //---------------------------------- only allow number be type to the inputbox ------------------------------------
 
         private string m_tmpWid;
         private string m_tmpHei;

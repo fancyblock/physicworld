@@ -47,6 +47,24 @@ namespace WorldEditor.MapData
         }
 
         /**
+         * @desc    get map size
+         */
+        public int MAP_WID
+        {
+            get
+            {
+                return m_mapWidth;
+            }
+        }
+        public int MAP_HEI
+        {
+            get
+            {
+                return m_mapHeight;
+            }
+        }
+
+        /**
          * @desc    add a tile to the map
          */
         public bool AddTile(MapTile tile)
